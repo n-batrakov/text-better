@@ -1,0 +1,37 @@
+include mixins/random.pug
+
+doctype html
+html(lang="ru-RU")
+  head
+    title Texting Etiquette
+    meta(
+        http-equiv="Content-Type"
+        content="text/html; charset=utf=8"
+    )
+    link(rel="shorcut icon" href="favicon.ico")
+    link(rel="stylesheet" href="index.css")
+
+  body
+    nav.navbar
+      a.navbar-item One
+      a.navbar-item Two
+
+    h1 Texting Etiquette
+    main.rules-list
+
+      - for (var i=0; i<15; i++)
+        article.rule
+          h3 Title
+          +paragraphs(1)
+          .messenger
+            span.in Hi
+            span.out Hi! How are you
+            span.in
+              | Fine!
+              | Thanks for asking.
+              br
+              br
+              | How are you?
+
+
+    .footer
