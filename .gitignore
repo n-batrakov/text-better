@@ -85,3 +85,4 @@ typings/
 .dynamodb/
 
 **/dist
+todo.md
