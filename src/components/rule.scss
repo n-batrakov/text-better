@@ -1,14 +1,24 @@
 .rules-list {
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
-  padding: 10px;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 800px;
 }
 
 .rule {
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
+  margin: 10px 0;
   background-color: aliceblue;
   border-radius: 5px;
+  display: grid;
+  grid-gap: 10px;
+
+  .content {
+    grid-row: 1;
+    grid-column: 1;
+  }
+
+  &.two-column {
+    grid-template-columns: auto auto;
+
+    &:nth-child(even) .content { grid-column: 2; }
+  }
 }

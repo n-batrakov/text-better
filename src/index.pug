@@ -20,18 +20,38 @@ html(lang="ru-RU")
     main.rules-list
 
       - for (var i=0; i<15; i++)
-        article.rule
+        article.rule: .content
           h3 Title
-          +paragraphs(1)
-          .messenger
+          +paragraphs(2)
+        article.rule.two-column
+          .sample: .messenger
             span.in Hi
-            span.out Hi! How are you
+            span.out Hi! How are you?
             span.in
               | Fine!
               | Thanks for asking.
               br
               br
               | How are you?
-
+            span.out
+              | 👍
+          .content
+            h3 Title
+            +paragraphs(1)
+        article.rule.two-column
+          .sample: .messenger
+            span.in Hi
+            span.out Hi! How are you?
+            span.in
+              | Fine!
+              | Thanks for asking.
+              br
+              br
+              | How are you?
+            span.out
+              | 👍
+          .content
+            h3 Title
+            +paragraphs(1)
 
     .footer
