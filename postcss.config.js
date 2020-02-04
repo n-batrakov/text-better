@@ -4,6 +4,9 @@ module.exports = {
         require("stylelint")({
             configFile: '.stylelintrc.json'
         }),
+        require("postcss-url")({
+            url: 'inline'
+        }),
         require('autoprefixer'),
         require('@csstools/postcss-sass')({
             includePaths: ["src/styles"],

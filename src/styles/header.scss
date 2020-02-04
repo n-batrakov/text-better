@@ -1,0 +1,18 @@
+@import './@palette';
+
+.header {
+  display: flex;
+  padding: 30px;
+
+  .menu-icon {
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    outline: none;
+    color: $text-color;
+
+    &:hover { color: $text-color-hover; }
+    &:focus { color: $text-color-focus; }
+  }
+}

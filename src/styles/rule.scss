@@ -1,0 +1,38 @@
+$side-padding: 30px;
+$top-padding: 50px;
+$text-min-width: 300px;
+$col-gap: 30px;
+$rule-gap: 200px;
+
+.rules-list {
+  margin: $top-padding auto;
+}
+
+.rule {
+  padding: 0 $side-padding;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: $rule-gap;
+
+  .content {
+    flex-basis: $text-min-width;
+    flex-grow: 2;
+    margin: 0 $col-gap 0 0;
+  }
+
+  .sample {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+  }
+
+  &:nth-of-type(even) {
+    flex-direction: row-reverse;
+
+    .content {
+      text-align: end;
+      margin: 0 0 0 $col-gap;
+    }
+  }
+}

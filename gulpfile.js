@@ -1,5 +1,5 @@
 const gulp = require('gulp')
-const rename = require('gulp-rename')
+const concat = require('gulp-concat');
 const postcss = require('gulp-postcss')
 const connect = require('gulp-connect')
 const pug = require('gulp-pug')
@@ -14,7 +14,7 @@ const html = () =>
 
 const css = () => gulp.src('src/**/*.scss')
     .pipe(postcss(postcssPlugins, postcssConfig))
-    .pipe(rename(x => x.extname = '.css'))
+    .pipe(concat('index.css'))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 

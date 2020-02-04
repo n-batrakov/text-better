@@ -1,57 +1,57 @@
-include mixins/random.pug
+include ../mixins/random.pug
+
+mixin rule()
+  article.rule
+    .content
+      h2 Title
+      +paragraphs(1)
+    .sample
+      .a-b.a: .messenger
+        span.in Hi
+        span.out Hi! How are you?
+        span.in
+          | Fine!
+          | Thanks for asking.
+          br
+          br
+          | How are you?
+        span.out
+          | 👍
+      .a-b.b: .messenger
+        span.in Hi
+        span.out Hi! How are you?
+        span.in
+          | Fine!
+          | Thanks for asking.
+          br
+          br
+          | How are you?
+        span.out
+          | 👍
 
 doctype html
 html(lang="ru-RU")
   head
-    title Texting Etiquette
+    title Text Better
     meta(
         http-equiv="Content-Type"
         content="text/html; charset=utf=8"
     )
+    meta(
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    )
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap&subset=cyrillic")
     link(rel="shorcut icon" href="favicon.ico")
     link(rel="stylesheet" href="index.css")
 
   body
-    nav.navbar
-      a.navbar-item One
-      a.navbar-item Two
+    nav.header
+      span.menu-icon: include ../static/icons/menu.svg
+      h1.flex--center Text Better
+      a.menu-icon(href="#"): include ../static/icons/question-circle.svg
 
-    h1 Texting Etiquette
     main.rules-list
-
-      - for (var i=0; i<15; i++)
-        article.rule: .content
-          h3 Title
-          +paragraphs(2)
-        article.rule.two-column
-          .sample: .messenger
-            span.in Hi
-            span.out Hi! How are you?
-            span.in
-              | Fine!
-              | Thanks for asking.
-              br
-              br
-              | How are you?
-            span.out
-              | 👍
-          .content
-            h3 Title
-            +paragraphs(1)
-        article.rule.two-column
-          .sample: .messenger
-            span.in Hi
-            span.out Hi! How are you?
-            span.in
-              | Fine!
-              | Thanks for asking.
-              br
-              br
-              | How are you?
-            span.out
-              | 👍
-          .content
-            h3 Title
-            +paragraphs(1)
-
-    .footer
+      +rule()
+      .wave: include ../static/waves/wave1.svg
+      +rule()
