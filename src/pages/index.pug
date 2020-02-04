@@ -49,6 +49,10 @@ html(lang="ru-RU")
     nav.header
       span.menu-icon: include ../static/icons/menu.svg
       h1.flex--center Text Better
+      button.btn.menu-icon(
+        onClick="document.body.classList.toggle('dark')"
+      )
+        include ../static/icons/sun.svg
       a.menu-icon(href="#"): include ../static/icons/question-circle.svg
 
     main.rules-list

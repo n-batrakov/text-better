@@ -2,7 +2,7 @@
 
 .header {
   display: flex;
-  padding: 30px;
+  padding: 30px 15px;
 
   .menu-icon {
     font-size: 48px;
@@ -11,8 +11,12 @@
     cursor: pointer;
     outline: none;
     color: $text-color;
+    border-radius: 50%;
+    padding: 0 15px;
 
     &:hover { color: $text-color-hover; }
-    &:focus { color: $text-color-focus; }
+    &:focus { box-shadow: 0 0 5px #51dce4; }
   }
+
+  .menu-icon:not(:last-child) { margin-right: 15px; }
 }

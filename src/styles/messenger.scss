@@ -20,21 +20,31 @@ $circle-margin: 5px;
     text-align: center;
   }
 
-  @mixin set-color($color, $dir) {
+  @mixin sample-border-color($color, $dir) {
     background-image: linear-gradient(#{$dir}, darken($color, 40), #{$color});
     box-shadow: 5px 10px 1px rgba(darken($color, 60), 0.4);
   }
 
   &.a {
-    @include set-color($sample-red, to right bottom);
+    @include sample-border-color($sample-bad-border-color, to right bottom);
 
     &::after { content: url('../static/icons/cross.svg'); }
+
+    .messenger {
+      background-color: $sample-bad-bkg-color;
+      color: $sample-bad-text-color;
+    }
   }
 
   &.b {
-    @include set-color($sample-green, to left bottom);
+    @include sample-border-color($sample-good-border-color, to left bottom);
 
     &::after { content: url('../static/icons/chevron-down.svg'); }
+
+    .messenger {
+      background-color: $sample-good-bkg-color;
+      color: $sample-good-text-color;
+    }
   }
 }
 
@@ -48,8 +58,6 @@ $circle-margin: 5px;
   display: grid;
   grid-auto-rows: min-content;
   grid-gap: 5px;
-  background-color: $chat-bkg-color;
-  color: $chat-text-color;
 
   > span {
     padding: 10px;
