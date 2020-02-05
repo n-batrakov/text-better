@@ -5,29 +5,7 @@ mixin rule()
     .content
       h2 Title
       +paragraphs(1)
-    .sample
-      .a-b.a: .messenger
-        span.in Hi
-        span.out Hi! How are you?
-        span.in
-          | Fine!
-          | Thanks for asking.
-          br
-          br
-          | How are you?
-        span.out
-          | 👍
-      .a-b.b: .messenger
-        span.in Hi
-        span.out Hi! How are you?
-        span.in
-          | Fine!
-          | Thanks for asking.
-          br
-          br
-          | How are you?
-        span.out
-          | 👍
+    +sample()
 
 doctype html
 html(lang="ru-RU")
@@ -48,14 +26,26 @@ html(lang="ru-RU")
   body
     nav.header
       span.menu-icon: include ../static/icons/menu.svg
-      h1.flex--center Text Better
-      button.btn.menu-icon(
-        onClick="document.body.classList.toggle('dark')"
-      )
+      h1 Text Better
+      button.btn.menu-icon(onClick="document.body.classList.toggle('dark')")
         include ../static/icons/sun.svg
       a.menu-icon(href="#"): include ../static/icons/question-circle.svg
 
     main.rules-list
-      +rule()
-      .wave: include ../static/waves/wave1.svg
-      +rule()
+      include ../rules/be-respectful.pug
+      include ../rules/check-grammar.pug
+      include ../rules/keep-it-short.pug
+      include ../rules/think-before-answer.pug
+      include ../rules/keep-it-simple.pug
+      include ../rules/help-to-understand.pug
+      include ../rules/comment-on-attachments.pug
+      include ../rules/dont-chain-message.pug
+      include ../rules/express-intentions-clearly.pug
+      include ../rules/be-patient.pug
+      include ../rules/remind-gently.pug
+      include ../rules/react.pug
+      include ../rules/use-emojis-with-care.pug
+      include ../rules/quote-messages.pug
+      include ../rules/indent-messages.pug
+      include ../rules/format-messages.pug
+      include ../rules/mind-the-time.pug
