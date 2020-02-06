@@ -1,51 +1,61 @@
 include ../mixins/random.pug
 
-mixin rule()
-  article.rule
-    .content
-      h2 Title
-      +paragraphs(1)
-    +sample()
+-
+  var menu = [
+    ['#be-respectful', 'Уважайте собеседника'],
+    ['#check-grammar', 'Будьте грамотны'],
+    ['#keep-it-short', 'Сохраняйте локаничность'],
+    ['#think-before-answer', 'Обдумайте ответ'],
+    ['#keep-it-simple', 'Используйте понятный язык'],
+    ['#help-to-understand', 'Помогите понять вас'],
+    ['#comment-on-attachments', 'Оставляйте свои комментарии к ссылкам'],
+    ['#dont-chain-message', 'Не пишите сообщения цепочкой'],
+    ['#express-intentions-clearly', 'Выражайте намерения явно'],
+    ['#be-patient', 'Дайте время на ответ'],
+    ['#remind-gently', 'Аккуратно напоминайте о себе'],
+    ['#react', 'Оставляйте свою реакцию на сообщение'],
+    ['#use-emojis-with-care', 'Используйте эмодзи аккуратно'],
+    ['#quote-messages', 'Используйте ссылки на сообщения'],
+    ['#indent-messages', 'Используйте отступы'],
+    ['#format-messages', 'Форматируйте текст'],
+    ['#mind-the-time', 'Не пишите поздно'],
+  ]
 
 doctype html
 html(lang="ru-RU")
   head
     title Text Better
-    meta(
-        http-equiv="Content-Type"
-        content="text/html; charset=utf=8"
-    )
-    meta(
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-    )
-    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:100,400&display=swap&subset=cyrillic")
+    meta(http-equiv="Content-Type" content="text/html; charset=utf=8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic")
     link(rel="shorcut icon" href="favicon.ico")
     link(rel="stylesheet" href="index.css")
 
-  body
-    nav.header
-      span.menu-icon: include ../static/icons/menu.svg
+  body.dark
+    header.header
       h1 Text Better
-      button.btn.menu-icon(onClick="document.body.classList.toggle('dark')")
+      button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
         include ../static/icons/sun.svg
-      a.menu-icon(href="#"): include ../static/icons/question-circle.svg
+
+    nav.menu
+      ul: each item in menu
+        li: a(href=item[0])= item[1]
 
     main.rules-list
-      include ../rules/be-respectful.pug
-      include ../rules/check-grammar.pug
-      include ../rules/keep-it-short.pug
-      include ../rules/think-before-answer.pug
-      include ../rules/keep-it-simple.pug
-      include ../rules/help-to-understand.pug
-      include ../rules/comment-on-attachments.pug
-      include ../rules/dont-chain-message.pug
-      include ../rules/express-intentions-clearly.pug
-      include ../rules/be-patient.pug
-      include ../rules/remind-gently.pug
-      include ../rules/react.pug
-      include ../rules/use-emojis-with-care.pug
-      include ../rules/quote-messages.pug
-      include ../rules/indent-messages.pug
-      include ../rules/format-messages.pug
-      include ../rules/mind-the-time.pug
+      include ../rules/be-respectful
+      include ../rules/check-grammar
+      include ../rules/keep-it-short
+      include ../rules/think-before-answer
+      include ../rules/keep-it-simple
+      include ../rules/help-to-understand
+      include ../rules/comment-on-attachments
+      include ../rules/dont-chain-message
+      include ../rules/express-intentions-clearly
+      include ../rules/be-patient
+      include ../rules/remind-gently
+      include ../rules/react
+      include ../rules/use-emojis-with-care
+      include ../rules/quote-messages
+      include ../rules/indent-messages
+      include ../rules/format-messages
+      include ../rules/mind-the-time

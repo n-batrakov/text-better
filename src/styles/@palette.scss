@@ -1,9 +1,11 @@
-$accent-color: #51dce4;
+$accent-color: #0783ff;
 
 $bkg-color: var(--bkg-color);
 $text-color: var(--text-color);
 $text-color-focus: $accent-color;
 $text-color-hover: $accent-color;
+$link-color: $accent-color;
+$link-color-hover: $text-color-hover;
 $wave-color: $accent-color;
 
 $sample-bad-border-color: #f5aaaa;
@@ -14,7 +16,7 @@ $sample-bad-text-color: #fff;
 $sample-good-text-color: #fff;
 
 $chat-in-color: #888;
-$chat-out-color: #0783ff;
+$chat-out-color: $accent-color;
 
 @mixin dark-theme {
   --bkg-color: #333;
