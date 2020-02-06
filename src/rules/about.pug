@@ -1,13 +1,4 @@
-article.rule
-  .content
-    h2: a(name="about", href="#about")
-      | О проекте
-    p(style={
-      'height': '600px',
-      'background': '#d49191',
-      'border-radius': '10px',
-      'font-size': '66px',
-      'text-align': 'center',
-      'line-height': '8em',
-      'font-weight': 100,
-    }) TODO
+article
+  h2: a(name="about", href="#about")
+    | О проекте
+  +paragraphs(3)

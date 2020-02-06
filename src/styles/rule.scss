@@ -6,13 +6,16 @@ $rule-gap: 200px;
 
 .rules-list {
   margin: $top-padding auto;
+
+  article {
+    padding: 0 $side-padding;
+    margin-bottom: $rule-gap;
+  }
 }
 
 .rule {
-  padding: 0 $side-padding;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: $rule-gap;
 
   .content {
     flex-basis: $text-min-width;
@@ -30,8 +33,15 @@ $rule-gap: 200px;
   &:nth-of-type(even) {
     flex-direction: row-reverse;
 
-    .content {
-      margin: 0 0 0 $col-gap;
-    }
+    .content { margin: 0 0 0 $col-gap; }
   }
+}
+
+.tile-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-gap: 50px;
+  margin: 30px 0 0 0;
+  padding: 0;
+  list-style: none;
 }

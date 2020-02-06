@@ -28,6 +28,11 @@ h2 { @include header(48px); }
 h3 { @include header(36px); }
 
 p {
+  margin: 1.5em 0;
+}
+
+.text,
+p {
   font-size: 16px;
   line-height: 2em;
   text-align: justify;

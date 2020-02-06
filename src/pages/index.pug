@@ -1,4 +1,4 @@
-include ../mixins/random.pug
+include ../mixins/random
 
 -
   var menu = [
@@ -19,6 +19,9 @@ include ../mixins/random.pug
     ['#indent-messages', 'Используйте отступы'],
     ['#format-messages', 'Форматируйте текст'],
     ['#mind-the-time', 'Не пишите поздно'],
+    ['#business-texting', 'Деловая переписка'],
+    ['#messenger-features', 'Полезный функционал мессенджеров'],
+    ['#about', 'О проекте'],
   ]
 
 doctype html
@@ -59,3 +62,6 @@ html(lang="ru-RU")
       include ../rules/indent-messages
       include ../rules/format-messages
       include ../rules/mind-the-time
+      include ../rules/business-texting
+      include ../rules/messenger-features
+      include ../rules/about
