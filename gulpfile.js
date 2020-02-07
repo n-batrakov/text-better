@@ -6,7 +6,7 @@ const pug = require('gulp-pug')
 const { postcssPlugins, ...postcssConfig } = require('./postcss.config')
 
 const html = () =>
-    gulp.src('src/pages/*.pug')
+    gulp.src('src/index.pug')
     .pipe(pug())
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
