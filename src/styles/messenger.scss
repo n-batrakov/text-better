@@ -60,21 +60,40 @@ $circle-margin: 5px;
   grid-gap: 5px;
 
   > span {
+    display: flex;
     padding: 10px;
     border-radius: 20px;
     width: fit-content;
     min-width: 40px;
-    max-width: 40%;
+
+    &.default-time::after { content: "17:25"; }
+
+    .time,
+    &.default-time::after {
+      align-self: center;
+      font-size: 10px;
+    }
 
     &.in {
       background-color: $chat-in-color;
       border-top-left-radius: 0;
+
+      .time,
+      &.default-time::after {
+        margin-left: 20px;
+      }
     }
 
     &.out {
       margin-left: auto;
       background-color: $chat-out-color;
       border-bottom-right-radius: 0;
+      flex-direction: row-reverse;
+
+      .time,
+      &.default-time::after {
+        margin-right: 20px;
+      }
     }
   }
 }

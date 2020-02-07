@@ -14,24 +14,28 @@ mixin paragraphs(n)
 mixin sample()
   .sample
     .a-b.a: .messenger
-      span.in Hi
-      span.out Hi! How are you?
       span.in
+        | Hi
+        span.time 17:24
+      span.out
+        | Hi! How are you?
+        span.time 17:24
+      span.in.default-time
         | Fine!
         | Thanks for asking.
         br
         br
         | How are you?
-      span.out
+      span.out.default-time
         | 👍
     .a-b.b: .messenger
-      span.in Hi
-      span.out Hi! How are you?
-      span.in
+      span.in.default-time Hi
+      span.out.default-time Hi! How are you?
+      span.in.default-time
         | Fine!
         | Thanks for asking.
         br
         br
         | How are you?
-      span.out
+      span.out.default-time
         | 👍
