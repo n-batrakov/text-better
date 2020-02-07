@@ -4,7 +4,7 @@ $circle-height: 40px;
 $circle-margin: 5px;
 
 .a-b {
-  min-width: 300px;
+  width: 300px;
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -61,15 +61,18 @@ $circle-margin: 5px;
 
   > span {
     display: flex;
+    flex-direction: row-reverse;
     padding: 10px;
     border-radius: 20px;
     width: fit-content;
     min-width: 40px;
+    max-width: 80%;
+    font-size: 14px;
 
-    &.default-time::after { content: "17:25"; }
+    &.default-time::before { content: "17:25"; }
 
     .time,
-    &.default-time::after {
+    &.default-time::before {
       align-self: center;
       font-size: 10px;
     }
@@ -79,7 +82,7 @@ $circle-margin: 5px;
       border-top-left-radius: 0;
 
       .time,
-      &.default-time::after {
+      &.default-time::before {
         margin-left: 20px;
       }
     }
@@ -88,10 +91,10 @@ $circle-margin: 5px;
       margin-left: auto;
       background-color: $chat-out-color;
       border-bottom-right-radius: 0;
-      flex-direction: row-reverse;
+      flex-direction: row;
 
       .time,
-      &.default-time::after {
+      &.default-time::before {
         margin-right: 20px;
       }
     }
