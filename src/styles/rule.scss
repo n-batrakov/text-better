@@ -7,7 +7,7 @@ $rule-gap: 200px;
 .rules-list {
   margin: $top-padding auto;
 
-  article {
+  > * {
     padding: 0 $side-padding;
     margin-bottom: $rule-gap;
   }
@@ -17,7 +17,7 @@ $rule-gap: 200px;
   display: flex;
   flex-wrap: wrap;
 
-  .content {
+  article {
     flex-basis: $text-min-width;
     flex-grow: 2;
     margin: 0 $col-gap 0 0;
@@ -28,7 +28,7 @@ $rule-gap: 200px;
     }
   }
 
-  .sample {
+  aside {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
