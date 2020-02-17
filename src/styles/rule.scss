@@ -21,6 +21,11 @@ $rule-gap: 200px;
     flex-basis: $text-min-width;
     flex-grow: 2;
     margin: 0 $col-gap 0 0;
+
+    ul {
+      padding-left: 20px;
+      line-height: 2em;
+    }
   }
 
   .sample {

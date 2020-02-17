@@ -7,35 +7,10 @@
     "Curabitur gravida arcu ac tortor dignissim convallis. Platea dictumst quisque sagittis purus sit amet volutpat. Pharetra pharetra massa massa ultricies mi quis hendrerit dolor. Praesent tristique magna sit amet purus. Lobortis elementum nibh tellus molestie nunc. Faucibus purus in massa tempor nec. Sit amet purus gravida quis blandit turpis cursus in. Tortor at risus viverra adipiscing at. Quam id leo in vitae turpis massa. Gravida neque convallis a cras. Sit amet luctus venenatis lectus magna fringilla.",
   ];
 
+mixin text(n)
+  - for (var i = 0; i < n; i++)
+      = list[i]
+
 mixin paragraphs(n)
   - for (var i = 0; i < n; i++)
     p= list[i]
-
-mixin sample()
-  .sample
-    .a-b.a: .messenger
-      span.in
-        span.time 17:24
-        | Hi
-      span.out
-        span.time 17:24
-        | Hi! How are you?
-      span.in.default-time
-        | Fine!
-        | Thanks for asking.
-        br
-        br
-        | How are you?
-      span.out.default-time
-        | 👍
-    .a-b.b: .messenger
-      span.in.default-time Hi
-      span.out.default-time Hi! How are you?
-      span.in.default-time
-        | Fine!
-        | Thanks for asking.
-        br
-        br
-        | How are you?
-      span.out.default-time
-        | 👍

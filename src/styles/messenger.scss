@@ -52,12 +52,15 @@ $circle-margin: 5px;
   $padding: 10px;
 
   height: calc(100% - #{2 * $padding + $circle-height + $circle-margin});
-  min-height: 500px;
+  min-height: 400px;
   padding: $padding;
   border-radius: 20px;
   display: grid;
   grid-auto-rows: min-content;
   grid-gap: 5px;
+  font-size: 14px;
+
+  .emoji { font-size: 2em; }
 
   > span {
     display: flex;
@@ -67,14 +70,15 @@ $circle-margin: 5px;
     width: fit-content;
     min-width: 40px;
     max-width: 80%;
-    font-size: 14px;
+    word-break: break-word;
 
     &.default-time::before { content: "17:25"; }
 
     .time,
     &.default-time::before {
-      align-self: center;
+      align-self: flex-start;
       font-size: 10px;
+      word-break: keep-all;
     }
 
     &.in {
@@ -97,6 +101,16 @@ $circle-margin: 5px;
       &.default-time::before {
         margin-right: 20px;
       }
+    }
+
+    blockquote {
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
     }
   }
 }
