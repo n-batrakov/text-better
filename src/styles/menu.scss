@@ -3,10 +3,9 @@
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
     grid-gap: 0 20px;
     list-style-type: '#';
-    list-style-position: inside;
     padding: 0;
     margin: 0;
 

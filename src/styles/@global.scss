@@ -20,13 +20,6 @@ svg {
   width: auto;
 }
 
-.btn {
-  background: none;
-  border: none;
-  padding: 0;
-  cursor: pointer;
-}
-
 a {
   color: $link-color;
   text-decoration: none;
@@ -37,15 +30,14 @@ a {
   }
 }
 
-h2 > a {
-  color: inherit;
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
 
-  &:hover {
-    text-decoration: none;
-
-    &::after {
-      content: '¶';
-      margin-left: 20px;
-    }
-  }
+.page-limiter {
+  max-width: 1200px;
+  margin: 0 auto;
 }

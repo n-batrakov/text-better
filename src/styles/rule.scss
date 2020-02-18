@@ -1,16 +1,15 @@
-$side-padding: 30px;
+$side-padding: 15px;
 $top-padding: 50px;
 $text-min-width: 300px;
-$col-gap: 30px;
+$col-gap: 0;
 $rule-gap: 200px;
 
 .rules-list {
   margin: $top-padding auto;
 
-  > * {
-    padding: 0 $side-padding;
-    margin-bottom: $rule-gap;
-  }
+  > * { margin-bottom: $rule-gap; }
+
+  article { padding: 0 $side-padding; }
 }
 
 .rule {
@@ -38,13 +37,13 @@ $rule-gap: 200px;
   &:nth-of-type(even) {
     flex-direction: row-reverse;
 
-    .content { margin: 0 0 0 $col-gap; }
+    article { margin: 0 0 0 $col-gap; }
   }
 }
 
 .tile-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(auto, 500px));
   grid-gap: 50px;
   margin: 30px 0 0 0;
   padding: 0;

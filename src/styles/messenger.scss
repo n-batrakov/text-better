@@ -2,9 +2,10 @@
 
 $circle-height: 40px;
 $circle-margin: 5px;
+$a-b-icon-props: no-repeat center / 30px;
 
 .a-b {
-  width: 300px;
+  width: 250px;
   margin: 10px;
   padding: 10px;
   border-radius: 20px;
@@ -28,7 +29,10 @@ $circle-margin: 5px;
   &.a {
     @include sample-border-color($sample-bad-border-color, to right bottom);
 
-    &::after { content: url('../static/icons/cross.svg'); }
+    &::after {
+      content: "";
+      background: url('../static/icons/cross.svg') $a-b-icon-props;
+    }
 
     .messenger {
       background-color: $sample-bad-bkg-color;
@@ -39,7 +43,10 @@ $circle-margin: 5px;
   &.b {
     @include sample-border-color($sample-good-border-color, to left bottom);
 
-    &::after { content: url('../static/icons/chevron-down.svg'); }
+    &::after {
+      content: "";
+      background: url('../static/icons/checkmark.svg') $a-b-icon-props;
+    }
 
     .messenger {
       background-color: $sample-good-bkg-color;

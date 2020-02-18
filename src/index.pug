@@ -34,32 +34,33 @@ html(lang="ru-RU")
     link(rel="stylesheet" href="index.css")
 
   body.dark
-    header.header
-      h1 Text Better
-      button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
-        include static/icons/sun.svg
+    .page-limiter
+      header.header
+        h1: a(href="/") Text Better
+        //- button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
+        //-   include static/icons/sun.svg
 
-    nav.menu
-      ul: each item in menu
-        li: a(href=item[0])= item[1]
+      nav.menu
+        ul: each item in menu
+          li: a(href=item[0])= item[1]
 
-    main.rules-list
-      include content/be-respectful
-      include content/check-grammar
-      include content/keep-it-short
-      include content/think
-      include content/keep-it-simple
-      include content/help-to-understand
-      include content/comment-on-attachments
-      include content/dont-chain-message
-      include content/express-intentions-clearly
-      include content/be-patient
-      include content/remind-gently
-      include content/react
-      include content/use-emojis-with-care
-      include content/quote-messages
-      include content/format-messages
-      include content/mind-the-time
-      include content/business-texting
-      include content/messenger-features
-      include content/about
+      main.rules-list
+        include content/be-respectful
+        include content/check-grammar
+        include content/keep-it-short
+        include content/think
+        include content/keep-it-simple
+        include content/help-to-understand
+        include content/comment-on-attachments
+        include content/dont-chain-message
+        include content/express-intentions-clearly
+        include content/be-patient
+        include content/remind-gently
+        include content/react
+        include content/use-emojis-with-care
+        include content/quote-messages
+        include content/format-messages
+        include content/mind-the-time
+        include content/business-texting
+        include content/messenger-features
+        include content/about
