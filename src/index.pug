@@ -37,8 +37,8 @@ html(lang="ru-RU")
     .page-limiter
       header.header
         h1: a(href="/") Text Better
-        //- button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
-        //-   include static/icons/sun.svg
+        button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
+          include static/icons/sun.svg
 
       nav.menu
         ul: each item in menu

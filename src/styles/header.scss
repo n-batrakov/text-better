@@ -10,18 +10,16 @@
   }
 
   &__icon {
+    cursor: pointer;
     font-size: 48px;
     display: flex;
-    align-items: center;
-    cursor: pointer;
-    outline: none;
     color: $text-color;
     border-radius: 50%;
-    padding: 0 15px;
+    padding: 0 2px;
+    outline-color: $text-color-hover;
 
     &:hover { color: $text-color-hover; }
-    &:focus { box-shadow: 0 0 5px #51dce4; }
-  }
 
-  &__icon:not(:last-child) { margin-right: 15px; }
+    @media (max-width: 720px) { display: none; }
+  }
 }
