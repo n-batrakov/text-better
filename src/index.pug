@@ -37,7 +37,10 @@ html(lang="ru-RU")
     .page-limiter
       header.header
         h1: a(href="/") Text Better
-        button.btn.header__icon(onClick="document.body.classList.toggle('dark')")
+        button.btn.header__icon(
+          onClick="document.body.classList.toggle('dark')"
+          title="Toggle theme"
+        )
           include static/icons/sun.svg
 
       nav.menu
