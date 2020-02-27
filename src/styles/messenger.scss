@@ -36,7 +36,6 @@ $a-b-icon-props: no-repeat center / 30px;
 
     .messenger {
       background-color: $sample-bad-bkg-color;
-      color: $sample-bad-text-color;
     }
   }
 
@@ -50,7 +49,6 @@ $a-b-icon-props: no-repeat center / 30px;
 
     .messenger {
       background-color: $sample-good-bkg-color;
-      color: $sample-good-text-color;
     }
   }
 }
@@ -89,7 +87,8 @@ $a-b-icon-props: no-repeat center / 30px;
     }
 
     &.in {
-      background-color: $chat-in-color;
+      color: $chat-in-text-color;
+      background-color: $chat-in-bkg-color;
       border-top-left-radius: 0;
 
       .time,
@@ -99,8 +98,9 @@ $a-b-icon-props: no-repeat center / 30px;
     }
 
     &.out {
+      color: $chat-out-text-color;
+      background-color: $chat-out-bkg-color;
       margin-left: auto;
-      background-color: $chat-out-color;
       border-bottom-right-radius: 0;
       flex-direction: row;
 

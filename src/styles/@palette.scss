@@ -1,40 +1,34 @@
-$accent-color: #0783ff;
+$accent-color: var(--accent-color);
 
 $bkg-color: var(--bkg-color);
 $text-color: var(--text-color);
 $text-color-focus: $accent-color;
 $text-color-hover: $accent-color;
+$outline-color: $accent-color;
 $link-color: $accent-color;
 $link-color-hover: $text-color-hover;
 $wave-color: $accent-color;
 
 $sample-bad-border-color: #f5aaaa;
 $sample-good-border-color: #aaf5b2;
-$sample-bad-bkg-color: var(--sample-bad-bkg-color);
-$sample-good-bkg-color: var(--sample-good-bkg-color);
-$sample-bad-text-color: #fff;
-$sample-good-text-color: #fff;
+$sample-bad-bkg-color: var(--bkg-color);
+$sample-good-bkg-color: var(--bkg-color);
 
-$chat-in-color: #888;
-$chat-out-color: $accent-color;
+$chat-in-bkg-color: var(--chat-in-bkg-color);
+$chat-in-text-color: var(--text-color);
+$chat-out-bkg-color: #0051a7;
+$chat-out-text-color: #fff;
 
 @mixin dark-theme {
+  --accent-color: #93c8ff;
   --bkg-color: #333;
   --text-color: #fff;
-  --sample-bad-bkg-color: #523737;
-  --sample-good-bkg-color: #405237;
+  --chat-in-bkg-color: #555;
 }
 
 @mixin light-theme {
+  --accent-color: #0051a7;
   --bkg-color: #fff;
   --text-color: #333;
-  --sample-bad-bkg-color: #ffbebe;
-  --sample-good-bkg-color: #bfffbe;
-}
-
-body { @include light-theme(); }
-body.dark { @include dark-theme(); }
-
-@media (prefers-color-scheme: dark) {
-  body { @include dark-theme(); }
+  --chat-in-bkg-color: #e9e9e9;
 }

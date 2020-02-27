@@ -10,13 +10,10 @@
   }
 
   &__icon {
-    cursor: pointer;
     font-size: 48px;
     display: flex;
     color: $text-color;
     border-radius: 50%;
-    padding: 0 2px;
-    outline-color: $text-color-hover;
 
     &:hover { color: $text-color-hover; }
 

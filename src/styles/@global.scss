@@ -13,6 +13,16 @@ body {
 body {
   background-color: $bkg-color;
   color: $text-color;
+
+  @include light-theme();
+
+  &.dark {
+    @include dark-theme();
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme();
+  }
 }
 
 svg {
@@ -40,4 +50,9 @@ a {
 .page-limiter {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+a,
+button {
+  outline-color: $outline-color;
 }
