@@ -26,11 +26,22 @@ include mixins/random
 doctype html
 html(lang="ru-RU")
   head
-    title Text Better
     meta(http-equiv="Content-Type" content="text/html; charset=utf=8")
     meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title Text Better
+    meta(name="description" content="Советы для лучшей коммуникации в мессенджерах")
+
+    meta(name="og:type" property="og:type" content="website")
+    meta(name="og:title" property="og:title" content="Text Better")
+    meta(name="og:description" property="og:description" content="Советы для лучшей коммуникации в мессенджерах")
+    meta(name="og:locale" property="og:locale" content="ru_RU")
+    meta(name="og:url" property="og:url" content="https://text-better.info")
+    meta(name="og:image" property="og:image" content="https://text-better.info/logo-512.png")
+    meta(name="og:image:alt" property="og:image:alt" content="Text Better Logo")
+
     link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap&subset=cyrillic")
-    link(rel="shorcut icon" href="favicon.ico")
+    link(rel="shorcut icon" href="logo-32.png")
     link(rel="stylesheet" href="index.css")
 
   body.dark
