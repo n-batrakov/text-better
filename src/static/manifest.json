@@ -7,6 +7,10 @@
       "type": "image/png",
       "sizes": "128x128"
     }, {
+      "src": "/logo-256.png",
+      "type": "image/png",
+      "sizes": "256x256"
+    }, {
       "src": "/logo-512.png",
       "type": "image/png",
       "sizes": "512x512"
