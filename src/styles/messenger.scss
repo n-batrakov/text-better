@@ -77,24 +77,10 @@ $a-b-icon-props: no-repeat center / 30px;
     max-width: 80%;
     word-break: break-word;
 
-    &.default-time::before { content: "17:25"; }
-
-    .time,
-    &.default-time::before {
-      align-self: flex-start;
-      font-size: 10px;
-      word-break: keep-all;
-    }
-
     &.in {
       color: $chat-in-text-color;
       background-color: $chat-in-bkg-color;
       border-top-left-radius: 0;
-
-      .time,
-      &.default-time::before {
-        margin-left: 20px;
-      }
     }
 
     &.out {
@@ -103,11 +89,6 @@ $a-b-icon-props: no-repeat center / 30px;
       margin-left: auto;
       border-bottom-right-radius: 0;
       flex-direction: row;
-
-      .time,
-      &.default-time::before {
-        margin-right: 20px;
-      }
     }
 
     blockquote {
@@ -119,5 +100,16 @@ $a-b-icon-props: no-repeat center / 30px;
       padding-left: 20px;
       margin: 0;
     }
+
+    &::before {
+      content: attr(data-time);
+      align-self: flex-start;
+      font-size: 10px;
+      word-break: keep-all;
+    }
+
+    &.default-time::before { content: "17:25"; }
+    &.in::before { margin-left: 20px; }
+    &.out::before { margin-right: 20px; }
   }
 }
