@@ -32,6 +32,7 @@ $rule-gap: 200px;
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
+    height: fit-content;
   }
 
   &:nth-of-type(even) {
