@@ -32,6 +32,7 @@ h1 {
 h2 > a:hover::after {
   content: '¶';
   margin-left: 20px;
+  position: absolute;
 }
 
 h2 { @include header(38px); }
