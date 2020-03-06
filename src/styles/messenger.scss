@@ -67,6 +67,16 @@ $a-b-icon-props: no-repeat center / 30px;
 
   .emoji { font-size: 2em; }
 
+  blockquote {
+    font-size: 0.9em;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    padding-left: 20px;
+    margin: 0;
+  }
+
   > span {
     display: flex;
     flex-direction: row-reverse;
@@ -89,16 +99,6 @@ $a-b-icon-props: no-repeat center / 30px;
       margin-left: auto;
       border-bottom-right-radius: 0;
       flex-direction: row;
-    }
-
-    blockquote {
-      font-size: 0.9em;
-      margin-bottom: 15px;
-    }
-
-    ul {
-      padding-left: 20px;
-      margin: 0;
     }
 
     &::before {
