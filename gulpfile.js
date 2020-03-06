@@ -3,6 +3,7 @@ const concat = require('gulp-concat');
 const postcss = require('gulp-postcss')
 const connect = require('gulp-connect')
 const pug = require('gulp-pug')
+const htmlmin = require('gulp-htmlmin')
 const { postcssPlugins, ...postcssConfig } = require('./postcss.config')
 
 const copy = () =>
@@ -12,7 +13,8 @@ const copy = () =>
 
 const html = () =>
     gulp.src('src/index.pug')
-    .pipe(pug())
+    .pipe(pug({}))
+    .pipe(htmlmin({ collapseWhitespace: true }))
     .pipe(gulp.dest('dist'))
     .pipe(connect.reload())
 
