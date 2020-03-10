@@ -18,15 +18,13 @@
       | Убедитесь, что вы отправляете сообщение нужному собеседнику.
       | Нередки ситуации, когда сообщения отправляются по ошибке.
   aside
-    .a-b.a: .messenger
-      span.in.default-time
-        | Как там бла-бла-бла
-      span.out.default-time
-        | Foo bar baz blyat
-      span.in.default-time
-        | Не понял. Мы об одном и том же говорим?
-      span.out.default-time
-        | Ааа. Я подумал, ты о другом.
-    .a-b.b: .messenger
-      span.in.default-time Hi
-      span.out.default-time Hi
+    +good({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })
+    +bad({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })

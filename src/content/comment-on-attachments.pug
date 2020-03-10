@@ -16,25 +16,21 @@
       | Не приводите ссылку на иностранном языке, если не уверены, что собеседник
       | знает его в достаточной степени.
   aside
-    .a-b.a: .messenger
-      span.in.default-time
-        | Не подскажешь, когда заканчивается поддержка Internet Explorer?
-      span.out.default-time
-        | https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer
-      span.in.default-time
-        | Где там дата написана?
-      span.in.emoji
-        | 🙁
-    .a-b.b: .messenger
-      span.in.default-time
-        | Не подскажешь, когда заканчивается поддержка Internet Explorer?
-      span.out.default-time
-        | В 2025-м, когда закончится поддержка Windows 10.
-        | Подробнее о жизненном цикле Internet Explorer:
-        br
-        br
-        | https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer
-      span.in.default-time
-        | Отлично! Спасибо
-      span.in.emoji
-        | 👍
+    +bad({
+      in: 'Не подскажешь, когда заканчивается поддержка Internet Explorer?'
+    }, {
+      out: 'https://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer'
+    }, {
+      in: 'Где там дата написана?'
+    }, {
+      in: '🙁', emoji: true
+    })
+    +good({
+      in: 'Не подскажешь, когда заканчивается поддержка Internet Explorer?'
+    }, {
+      out: 'В 2025-м, когда закончится поддержка Windows 10. Подробнее о жизненном цикле Internet Explorer:\n\nhttps://support.microsoft.com/en-us/help/17454/lifecycle-faq-internet-explorer'
+    }, {
+      in: 'Отлично! Спасибо'
+    }, {
+      in: '👍', emoji: true
+    })

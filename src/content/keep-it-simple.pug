@@ -15,14 +15,13 @@
       | Если вам необходимо использовать какой-то термин, но вы сомневаетесь, что вас поймут,
       | не бойтесь написать определение термина.
   aside
-    .a-b.a: .messenger
-      span.out.default-time
-        | Hi
-      span.in.default-time
-        | Hi
-    .a-b.b: .messenger
-      span.out.default-time
-        | Hi
-      span.in.default-time
-        | Hi
-
+    +good({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })
+    +bad({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })

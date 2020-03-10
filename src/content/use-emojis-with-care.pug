@@ -12,14 +12,13 @@
       | Большое количество разнообразных смайликов может запутывать собеседника,
       | раздражать и мешать воспринимать информацию.
   aside
-    .a-b.a: .messenger
-      span.out.default-time
-        | Hi
-      span.in.default-time
-        | Hi
-    .a-b.b: .messenger
-      span.out.default-time
-        | Hi
-      span.in.default-time
-        | Hi
-
+    +good({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })
+    +bad({
+      out: 'Hi'
+    }, {
+      in: 'Hi'
+    })

@@ -64,20 +64,27 @@ $a-b-icon-props: no-repeat center / 30px;
   grid-auto-rows: min-content;
   grid-gap: 5px;
   font-size: 14px;
+  margin: 0;
+  list-style: none;
 
-  .emoji { font-size: 2em; }
-
-  blockquote {
-    font-size: 0.9em;
-    margin-bottom: 15px;
-  }
-
-  ul {
-    padding-left: 20px;
+  &__msg-text {
     margin: 0;
+    white-space: pre-line;
+    font-family: inherit;
+    font-size: inherit;
+
+    blockquote {
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
   }
 
-  > span {
+  &__msg {
     display: flex;
     flex-direction: row-reverse;
     padding: 10px;
@@ -86,6 +93,8 @@ $a-b-icon-props: no-repeat center / 30px;
     min-width: 40px;
     max-width: 80%;
     word-break: break-word;
+
+    &.emoji { font-size: 2em; }
 
     &.in {
       color: $chat-in-text-color;
