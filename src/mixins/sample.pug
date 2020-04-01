@@ -2,12 +2,12 @@ mixin sample(variant, messages)
   -
     let { className, label }
       = variant === 'bad'
-      ? { className: 'a', label: 'Пример неудачной переписки' }
+      ? { className: 'bad', label: 'Пример неудачной переписки' }
       : variant === 'good'
-      ? { className: 'b', label: 'Пример эффективной переписки' }
+      ? { className: 'good', label: 'Пример эффективной переписки' }
       : { className: '', label: '' }
 
-  .a-b(class=className)
+  .sample(class=className)
     h3.hidden= label
     ul.messenger
       - for (let item of messages)

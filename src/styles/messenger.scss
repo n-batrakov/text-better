@@ -4,7 +4,7 @@ $circle-height: 40px;
 $circle-margin: 5px;
 $a-b-icon-props: no-repeat center / 30px;
 
-.a-b {
+.sample {
   width: 250px;
   margin: 10px;
   padding: 10px;
@@ -26,7 +26,7 @@ $a-b-icon-props: no-repeat center / 30px;
     box-shadow: 5px 10px 1px rgba(darken($color, 60), 0.4);
   }
 
-  &.a {
+  &.bad {
     @include sample-border-color($sample-bad-border-color, to right bottom);
 
     &::after {
@@ -39,7 +39,7 @@ $a-b-icon-props: no-repeat center / 30px;
     }
   }
 
-  &.b {
+  &.good {
     @include sample-border-color($sample-good-border-color, to left bottom);
 
     &::after {
