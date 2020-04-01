@@ -1,10 +1,19 @@
+$content-max-width: 1200px;
+$side-padding: 30px;
+$menu-col-gap: 20px;
+$menu-max-cols: 4;
+
+$container-width: $content-max-width - 2 * $side-padding;
+$gaps-width: ($menu-max-cols - 1) * $menu-col-gap;
+$menu-col-max-width: ($container-width - $gaps-width) / $menu-max-cols;
+
 .menu {
-  padding: 100px 30px;
+  padding: 100px $side-padding;
 
   ul {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(auto, 300px));
-    grid-gap: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(auto, #{$menu-col-max-width}));
+    grid-gap: 0 $menu-col-gap;
     list-style-type: '#';
     padding: 0;
     margin: 0;
