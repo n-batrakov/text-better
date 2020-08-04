@@ -1,26 +1,30 @@
 {
-  "name": "static-site-gulp",
-  "version": "1.0.0",
-  "description": "",
+  "name": "text-better",
+  "version": "0.1.0",
+  "description": "Static website with messaging ethiquette",
   "main": "index.js",
   "scripts": {
     "start": "gulp start",
     "build": "gulp build"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "n.m.batrakov",
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "@csstools/postcss-sass": "^4.0.0",
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^9.8.6",
+    "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.7.0",
+    "gulp-htmlmin": "^5.0.1",
     "gulp-postcss": "^8.0.0",
     "gulp-pug": "^4.0.1",
     "gulp-rename": "^2.0.0",
-    "postcss-scss": "^2.0.0",
-    "stylelint": "^13.0.0",
-    "stylelint-config-standard": "^19.0.0",
-    "stylelint-scss": "^3.13.0"
+    "postcss-scss": "^2.1.1",
+    "postcss-url": "^8.0.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.18.0"
   }
 }

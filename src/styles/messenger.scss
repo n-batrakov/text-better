@@ -1,0 +1,124 @@
+@import './@palette';
+
+$circle-height: 40px;
+$circle-margin: 5px;
+$a-b-icon-props: no-repeat center / 30px;
+
+.sample {
+  width: 250px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+
+  &::after {
+    display: block;
+    width: $circle-height;
+    height: $circle-height;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 4px rgba(0, 0, 0, 0.5);
+    margin: $circle-margin auto 0 auto;
+    line-height: 3rem;
+    text-align: center;
+  }
+
+  @mixin sample-border-color($color, $dir) {
+    background-image: linear-gradient(#{$dir}, darken($color, 40), #{$color});
+    box-shadow: 5px 10px 1px rgba(darken($color, 60), 0.4);
+  }
+
+  &.bad {
+    @include sample-border-color($sample-bad-border-color, to right bottom);
+
+    &::after {
+      content: "";
+      background: url('../static/icons/cross.svg') $a-b-icon-props;
+    }
+
+    .messenger {
+      background-color: $sample-bad-bkg-color;
+    }
+  }
+
+  &.good {
+    @include sample-border-color($sample-good-border-color, to left bottom);
+
+    &::after {
+      content: "";
+      background: url('../static/icons/checkmark.svg') $a-b-icon-props;
+    }
+
+    .messenger {
+      background-color: $sample-good-bkg-color;
+    }
+  }
+}
+
+.messenger {
+  $padding: 10px;
+
+  height: calc(100% - #{2 * $padding + $circle-height + $circle-margin});
+  min-height: 400px;
+  padding: $padding;
+  border-radius: 20px;
+  display: grid;
+  grid-auto-rows: min-content;
+  grid-gap: 5px;
+  font-size: 14px;
+  margin: 0;
+  list-style: none;
+
+  &__msg-text {
+    margin: 0;
+    white-space: pre-line;
+    font-family: inherit;
+    font-size: inherit;
+
+    blockquote {
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+  }
+
+  &__msg {
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 10px;
+    border-radius: 20px;
+    width: fit-content;
+    min-width: 40px;
+    max-width: 80%;
+    word-break: break-word;
+
+    &.emoji { font-size: 2em; }
+
+    &.in {
+      color: $chat-in-text-color;
+      background-color: $chat-in-bkg-color;
+      border-top-left-radius: 0;
+    }
+
+    &.out {
+      color: $chat-out-text-color;
+      background-color: $chat-out-bkg-color;
+      margin-left: auto;
+      border-bottom-right-radius: 0;
+      flex-direction: row;
+    }
+
+    &::before {
+      content: attr(data-time);
+      align-self: flex-start;
+      font-size: 10px;
+      word-break: keep-all;
+    }
+
+    &.default-time::before { content: "17:25"; }
+    &.in::before { margin-left: 20px; }
+    &.out::before { margin-right: 20px; }
+  }
+}

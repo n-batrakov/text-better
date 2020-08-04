@@ -1,0 +1,34 @@
+$accent-color: var(--accent-color);
+
+$bkg-color: var(--bkg-color);
+$text-color: var(--text-color);
+$text-color-focus: $accent-color;
+$text-color-hover: $accent-color;
+$outline-color: $accent-color;
+$link-color: $accent-color;
+$link-color-hover: $text-color-hover;
+$wave-color: $accent-color;
+
+$sample-bad-border-color: #f5aaaa;
+$sample-good-border-color: #aaf5b2;
+$sample-bad-bkg-color: var(--bkg-color);
+$sample-good-bkg-color: var(--bkg-color);
+
+$chat-in-bkg-color: var(--chat-in-bkg-color);
+$chat-in-text-color: var(--text-color);
+$chat-out-bkg-color: #0051a7;
+$chat-out-text-color: #fff;
+
+@mixin dark-theme {
+  --accent-color: #93c8ff;
+  --bkg-color: #333;
+  --text-color: #fff;
+  --chat-in-bkg-color: #555;
+}
+
+@mixin light-theme {
+  --accent-color: #0051a7;
+  --bkg-color: #fff;
+  --text-color: #333;
+  --chat-in-bkg-color: #e9e9e9;
+}

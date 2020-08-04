@@ -1,0 +1,60 @@
+@import './@palette';
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: $bkg-color;
+  color: $text-color;
+
+  @include light-theme();
+
+  &.dark {
+    @include dark-theme();
+  }
+
+  @media (prefers-color-scheme: dark) {
+    @include dark-theme();
+  }
+}
+
+svg {
+  height: 1em;
+  width: auto;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+
+  &:hover {
+    color: $link-color-hover;
+    text-decoration: underline;
+  }
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.page-limiter {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+a,
+button {
+  outline-color: $outline-color;
+}
+
+.hidden { display: none; }

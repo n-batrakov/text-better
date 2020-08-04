@@ -1,0 +1,63 @@
+@import './@palette';
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 100;
+
+  > a {
+    color: inherit;
+    &:hover { text-decoration: none; }
+  }
+}
+
+@mixin header($size) {
+  font-size: $size;
+  line-height: $size + 4px;
+}
+
+h1 {
+  @include header(48px);
+
+  letter-spacing: 14px;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h2 > a:hover::after {
+  content: '¶';
+  margin-left: 20px;
+  position: absolute;
+}
+
+h2 { @include header(38px); }
+h3 { @include header(36px); }
+
+p {
+  margin: 1.5em 0;
+}
+
+.text,
+p {
+  font-size: 18px;
+  line-height: 2em;
+  text-align: justify;
+}
+
+.tip {
+  border-left: 5px solid $accent-color;
+  padding-left: 10px;
+  font-style: italic;
+}
+
+blockquote {
+  margin: 0;
+  font-style: italic;
+  border-left: 3px solid currentColor;
+  padding-left: 5px;
+}

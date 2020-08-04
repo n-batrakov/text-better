@@ -1,0 +1,83 @@
+include mixins/random
+include mixins/sample
+
+-
+  var menu = [
+    ['#be-respectful', 'Уважайте собеседника'],
+    ['#check-grammar', 'Будьте грамотны'],
+    ['#keep-it-short', 'Сохраняйте локаничность'],
+    ['#think', 'Обдумайте сообщение'],
+    ['#keep-it-simple', 'Используйте понятный язык'],
+    ['#help-to-understand', 'Помогите понять вас'],
+    ['#comment-on-attachments', 'Оставляйте свои комментарии к ссылкам'],
+    ['#dont-chain-message', 'Не пишите сообщения цепочкой'],
+    ['#express-intentions-clearly', 'Выражайте намерения явно'],
+    ['#be-patient', 'Дайте время на ответ'],
+    ['#remind-gently', 'Аккуратно напоминайте о себе'],
+    ['#react', 'Оставляйте свою реакцию на сообщение'],
+    ['#use-emojis-with-care', 'Используйте эмодзи аккуратно'],
+    ['#quote-messages', 'Используйте ссылки на сообщения'],
+    ['#format-messages', 'Форматируйте текст'],
+    ['#mind-the-time', 'Не пишите поздно'],
+    ['#business-texting', 'Деловая переписка'],
+    ['#messenger-features', 'Полезный функционал мессенджеров'],
+    ['#about', 'О проекте'],
+  ]
+
+doctype html
+html(lang="ru-RU")
+  head
+    meta(http-equiv="Content-Type" content="text/html; charset=utf=8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+    title Text Better
+    meta(name="description" content="Советы для лучшей коммуникации в мессенджерах")
+
+    meta(name="og:type" property="og:type" content="website")
+    meta(name="og:title" property="og:title" content="Text Better")
+    meta(name="og:description" property="og:description" content="Советы для лучшей коммуникации в мессенджерах")
+    meta(name="og:locale" property="og:locale" content="ru_RU")
+    meta(name="og:url" property="og:url" content="https://text-better.info")
+    meta(name="og:image" property="og:image" content="https://text-better.info/opengraph.png")
+    meta(name="og:image:alt" property="og:image:alt" content="Text Better Logo")
+
+    link(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Roboto:300,400")
+
+    link(rel="shorcut icon" href="logo-32.png")
+    link(rel="stylesheet" href="index.css")
+    link(rel="manifest" href="manifest.json")
+
+  body.dark
+    .page-limiter
+      header.header
+        h1: a(href="/") Text Better
+        button.btn.header__icon(
+          onClick="document.body.classList.toggle('dark')"
+          title="Toggle theme"
+        )
+          include static/icons/sun.svg
+
+      nav.menu
+        ul: each item in menu
+          li: a(href=item[0])= item[1]
+
+      main.rules-list
+        include content/be-respectful
+        include content/check-grammar
+        include content/keep-it-short
+        include content/think
+        include content/keep-it-simple
+        include content/help-to-understand
+        include content/comment-on-attachments
+        include content/dont-chain-message
+        include content/express-intentions-clearly
+        include content/be-patient
+        include content/remind-gently
+        include content/react
+        include content/use-emojis-with-care
+        include content/quote-messages
+        include content/format-messages
+        include content/mind-the-time
+        include content/business-texting
+        include content/messenger-features
+        include content/about

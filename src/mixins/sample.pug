@@ -1,0 +1,33 @@
+mixin sample(variant, messages)
+  -
+    let { className, label }
+      = variant === 'bad'
+      ? { className: 'bad', label: 'Пример неудачной переписки' }
+      : variant === 'good'
+      ? { className: 'good', label: 'Пример эффективной переписки' }
+      : { className: '', label: '' }
+
+  .sample(class=className)
+    h3.hidden= label
+    ul.messenger
+      - for (let item of messages)
+        -
+          let time = item.time === undefined ? '15:42' : item.time
+          let { type, label, text }
+            = 'in' in item
+              ? { type: 'in', label: `[Собеседник, ${time}]: `, text: item.in }
+            : 'out' in item
+              ? { type: 'out', label: `[Вы, ${time}]: `, text: item.out }
+              : { type: '', label: '', text: '' }
+
+          let className = `${type} ${item.emoji ? 'emoji' : ''}`
+
+        li.messenger__msg(class=className, data-time=time)
+          i.hidden= label
+          pre.messenger__msg-text!= text
+
+mixin bad(...messages)
+  +sample('bad', messages)
+
+mixin good(...messages)
+  +sample('good', messages)

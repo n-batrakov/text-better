@@ -1,0 +1,22 @@
+@import './@palette';
+
+.header {
+  display: flex;
+  padding: 30px 15px;
+
+  h1 {
+    margin: 0 auto;
+    user-select: none;
+  }
+
+  &__icon {
+    font-size: 48px;
+    display: flex;
+    color: $text-color;
+    border-radius: 50%;
+
+    &:hover { color: $text-color-hover; }
+
+    @media (max-width: 720px) { display: none; }
+  }
+}
