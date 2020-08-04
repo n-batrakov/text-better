@@ -1,6 +1,6 @@
 # Text Better
 
-> WIP
+> WIP: требуется работа над контентом, в т.ч. редактура.
 
 ![Logo](src/static/opengraph.png)
 
